@@ -1,9 +1,21 @@
 {
+  "name": "new-project",
+  "version": "1.0.0",
+  "description": "مشروع Express مع SQLite والجلسات",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "connect-sqlite3": "^0.9.16",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "",
+  "license": "ISC"
 }
