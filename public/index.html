@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الأفكار الإبداعية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>منصة الأفكار</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="home">الرئيسية</a>
+                <a href="#" class="nav-link" data-page="explore">استكشف</a>
+                <a href="#" class="nav-link" data-page="add-idea">أضف فكرة</a>
+            </div>
+            
+            <div class="nav-auth">
+                <button id="login-btn" class="btn btn-outline">تسجيل الدخول</button>
+                <button id="register-btn" class="btn btn-primary">إنشاء حساب</button>
+                <div id="user-menu" class="user-menu hidden">
+                    <div class="user-avatar">
+                        <img id="user-avatar-img" src="default-avatar.svg" alt="صورة المستخدم">
+                    </div>
+                    <div class="user-dropdown">
+                        <span id="username-display"></span>
+                        <button id="logout-btn" class="btn btn-text">تسجيل الخروج</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <!-- الصفحة الرئيسية -->
+        <section id="home-page" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">شارك أفكارك الإبداعية مع العالم</h1>
+                    <p class="hero-description">منصة تفاعلية لمشاركة الأفكار والابتكارات، احصل على تعليقات وآراء من مجتمع من المبدعين</p>
+                    <button id="get-started-btn" class="btn btn-primary btn-large">ابدأ الآن</button>
+                </div>
+                <div class="hero-image">
+                    <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="70" width="300" height="160" rx="10" fill="#E0E7FF" stroke="#4F46E5" stroke-width="2"/>
+                        <circle cx="200" cy="100" r="20" fill="#4F46E5"/>
+                        <rect x="80" y="130" width="240" height="10" rx="5" fill="#C7D2FE"/>
+                        <rect x="80" y="150" width="180" height="10" rx="5" fill="#C7D2FE"/>
+                        <rect x="80" y="170" width="200" height="10" rx="5" fill="#C7D2FE"/>
+                        <path d="M120 220C120 226.627 114.627 232 108 232C101.373 232 96 226.627 96 220C96 213.373 101.373 208 108 208C114.627 208 120 213.373 120 220Z" fill="#4F46E5"/>
+                        <path d="M280 220C280 226.627 274.627 232 268 232C261.373 232 256 226.627 256 220C256 213.373 261.373 208 268 208C274.627 208 280 213.373 280 220Z" fill="#4F46E5"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h2 class="section-title">مميزات المنصة</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.4 15C19.2669 15.3031 19.1338 15.6062 19.0006 15.9094C18.513 16.8487 17.9925 17.7703 17.4391 18.6741C16.5625 20.0925 15.5938 21.45 14.5312 22.7406C14.3438 22.9594 14.1656 23.1906 14.0156 23.4375C13.8295 23.7422 13.4883 23.9062 13.125 23.9062H10.875C10.5117 23.9062 10.1705 23.7422 9.98438 23.4375C9.83437 23.1906 9.65625 22.9594 9.46875 22.7406C8.40625 21.45 7.4375 20.0925 6.5625 18.6741C6.00906 17.7703 5.48859 16.8487 5.00094 15.9094C4.86781 15.6062 4.73469 15.3031 4.60156 15C4.21406 14.1938 4 13.3094 4 12.375C4 9.41531 6.3525 7.03125 9.28125 7.03125C10.875 7.03125 12.3281 7.72125 13.3125 8.8125C14.2969 7.72125 15.75 7.03125 17.3438 7.03125C20.2725 7.03125 22.625 9.41531 22.625 12.375C22.625 13.3094 22.4109 14.1938 22.0234 15Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>مشاركة سهلة</h3>
+                        <p>شارك أفكارك بسهولة مع مجتمع المبدعين واحصل على تعليقات قيمة</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>تفاعل مجتمعي</h3>
+                        <p>تفاعل مع أفكار الآخرين من خلال التعليقات والإعجابات</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2V8H20" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 13H8" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 17H8" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 9H9H8" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>تعديل سهل</h3>
+                        <p>يمكنك تعديل أفكارك في أي وقت وتطويرها بناءً على تعليقات المجتمع</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trending-ideas-section">
+                <h2 class="section-title">أحدث الأفكار</h2>
+                <div id="trending-ideas" class="ideas-grid">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+                <div class="load-more-container">
+                    <button id="load-more-btn" class="btn btn-outline">تحميل المزيد</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة استكشاف الأفكار -->
+        <section id="explore-page" class="page">
+            <div class="page-header">
+                <h1 class="page-title">استكشف الأفكار</h1>
+                <div class="filters">
+                    <select id="category-filter" class="filter-select">
+                        <option value="">جميع الفئات</option>
+                        <option value="تكنولوجيا">تكنولوجيا</option>
+                        <option value="تصميم">تصميم</option>
+                        <option value="أعمال">أعمال</option>
+                        <option value="تعليم">تعليم</option>
+                        <option value="صحة">صحة</option>
+                        <option value="ترفيه">ترفيه</option>
+                    </select>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="newest">الأحدث</option>
+                        <option value="popular">الأكثر شعبية</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="explore-ideas" class="ideas-grid">
+                <!-- سيتم ملؤها ديناميكياً -->
+            </div>
+            <div class="load-more-container">
+                <button id="explore-load-more-btn" class="btn btn-outline">تحميل المزيد</button>
+            </div>
+        </section>
+        
+        <!-- صفحة إضافة فكرة -->
+        <section id="add-idea-page" class="page">
+            <div class="page-header">
+                <h1 class="page-title">أضف فكرة جديدة</h1>
+            </div>
+            
+            <div class="form-container">
+                <form id="add-idea-form" class="idea-form">
+                    <div class="form-group">
+                        <label for="idea-title">عنوان الفكرة</label>
+                        <input type="text" id="idea-title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-category">الفئة</label>
+                        <select id="idea-category" name="category" required>
+                            <option value="">اختر فئة</option>
+                            <option value="تكنولوجيا">تكنولوجيا</option>
+                            <option value="تصميم">تصميم</option>
+                            <option value="أعمال">أعمال</option>
+                            <option value="تعليم">تعليم</option>
+                            <option value="صحة">صحة</option>
+                            <option value="ترفيه">ترفيه</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-description">وصف الفكرة</label>
+                        <textarea id="idea-description" name="description" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-image">رابط الصورة (اختياري)</label>
+                        <input type="url" id="idea-image" name="image_url">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">نشر الفكرة</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <!-- صفحة عرض الفكرة -->
+        <section id="idea-detail-page" class="page">
+            <div class="idea-detail-container">
+                <!-- سيتم ملؤها ديناميكياً -->
+            </div>
+        </section>
+    </main>
+
+    <!-- نماذج تسجيل الدخول والتسجيل -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">تسجيل الدخول</h2>
+                <button id="close-modal" class="close-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">البريد الإلكتروني</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">كلمة المرور</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-full">تسجيل الدخول</button>
+                    </div>
+                    
+                    <div class="auth-switch">
+                        <p>ليس لديك حساب؟ <a href="#" id="switch-to-register">إنشاء حساب</a></p>
+                    </div>
+                </form>
+                
+                <form id="register-form" class="auth-form hidden">
+                    <div class="form-group">
+                        <label for="register-username">اسم المستخدم</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-email">البريد الإلكتروني</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-password">كلمة المرور</label>
+                        <input type="password" id="register-password" name="password" required minlength="6">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-full">إنشاء حساب</button>
+                    </div>
+                    
+                    <div class="auth-switch">
+                        <p>لديك حساب بالفعل؟ <a href="#" id="switch-to-login">تسجيل الدخول</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- رسائل التنبيه -->
+    <div id="alert-container" class="alert-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
